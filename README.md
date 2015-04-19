@@ -1,3 +1,4 @@
 # Rumble-on--
 
-Learning Git.
+Rumble on is a repository for learning Git.. as part of my technical trainings.
+
