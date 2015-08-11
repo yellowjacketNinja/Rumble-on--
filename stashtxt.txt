@@ -1,0 +1,20 @@
+test file to check the working of the stash command
+
+
+Soo, These are the few commands I ran to test the stash feature, with the details of what the each command does(in my own words).
+
+git stash save [<msg>] --> saves the current changes in the staged area to a stash removing them from the workspace, which you can recover at anyother time. Just like taking a snapshot of the work that you want to save and get it again in the future. Here the 'save and msg' is optional.
+
+git stash apply [<stash>] --> This command will retrieve all the stashed changes and add them to the staging area (workspace). You can specify a particular stash name to get a specific stash or you can omit that and get the lastest stash.
+
+git stash pop --> this command will retrieve the last stash and removes the given stash
+
+git stash list --> lists all the stashes that you currently have
+
+git stash show [<stash>] --> Show the changes recorded in the stash as a diff between the stashed state and its original parent. when no <stash> is given, shows the latest one.
+
+git stash drop [<stash>] --> drops the stash and when no <stash> is given, removes the latest stash.
+
+git stash clear --> removes all the stashes and any changes that are not retrieved can not be recovered.
+
+git stash branch <branchname> [<stash>] --> this command will create a new branch and checks out to it, starting from the commit at which the <stash> was originally created, applies the changes recorded in <stash> to the new working tree and index. If that succeeds, then the <stash> referenced at stash@{revision} will be droped. when no <stash> is given then the latest one. This is useful when the branch on which we ran git stash changed enough that when we apply the stash will fail due to conflicts. Since this command will apply the stash on top of the commit that was HEAD at the time git stash was run, it retores the originally stashed state with no conflicts.
