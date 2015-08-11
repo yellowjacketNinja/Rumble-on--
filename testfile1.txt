@@ -1,0 +1,2 @@
+Hello world,
+In this file I will be adding few things that i have learned over tha past few days, just for practice and reference.
